@@ -4,7 +4,7 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
-use Kevin\WpPluginCli\Command\NewPluginCommand;
+use Kpaz\CreateWpPlugin\Command\NewPluginCommand;
 
 $application = new Application('WP Plugin CLI', '1.0.0');
 
