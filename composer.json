@@ -1,0 +1,21 @@
+{
+    "name": "kpaz/create-wp-plugin",
+    "description": "CLI tool to create the basic structure of a WordPress plugin",
+    "autoload": {
+        "psr-4": {
+            "Kpaz\\CreateWpPlugin\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kevin Paz",
+            "email": "pazortizkevindaniel@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/console": "^8.0"
+    },
+    "bin": [
+        "bin/wp-plugin"
+    ]
+}

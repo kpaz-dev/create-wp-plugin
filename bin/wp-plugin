@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use Kevin\WpPluginCli\Command\NewPluginCommand;
+
+$application = new Application('WP Plugin CLI', '1.0.0');
+
+$application->add(new NewPluginCommand());
+
+$application->run();
