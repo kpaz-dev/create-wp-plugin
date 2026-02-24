@@ -8,6 +8,6 @@ use Kpaz\CreateWpPlugin\Command\NewPluginCommand;
 
 $application = new Application('WP Plugin CLI', '1.0.0');
 
-$application->add(new NewPluginCommand());
+$application->addCommand(new NewPluginCommand());
 
 $application->run();

@@ -11,6 +11,11 @@ class NewPluginCommand extends Command
 {
     protected static $defaultName = 'new';
 
+    public function __construct()
+    {
+        parent::__construct('new');
+    }
+
     protected function configure(): void
     {
         $this->setDescription('Create a new WP plugin')
