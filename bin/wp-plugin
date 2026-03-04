@@ -1,13 +1,11 @@
 #!/usr/bin/env php
 <?php
 
+declare(strict_types=1);
+
 require __DIR__ . '/../vendor/autoload.php';
 
-use Symfony\Component\Console\Application;
-use Kpaz\CreateWpPlugin\Command\NewPluginCommand;
+use Kpaz\CreateWpPlugin\CliApplicationFactory;
 
-$application = new Application('WP Plugin CLI', '1.0.0');
-
-$application->addCommand(new NewPluginCommand());
-
+$application = CliApplicationFactory::create();
 $application->run();
