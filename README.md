@@ -10,6 +10,7 @@ Al ejecutar el comando se crea una carpeta con:
 - Archivos `index.php` con _"Silence is golden."_ para evitar indexado.
 - Archivo principal del plugin (`<slug>.php`) con cabecera de WordPress.
 - `readme.txt` base en formato compatible con WordPress.org.
+- Opcionalmente, entorno Docker con WordPress + MariaDB + WP-CLI (`--docker`).
 
 ## Requisitos
 
@@ -37,7 +38,7 @@ wp-plugin new mi-plugin
 ## Uso
 
 ```bash
-wp-plugin new <slug-del-plugin>
+wp-plugin new <slug-del-plugin> [--docker]
 ```
 
 Ejemplo:
@@ -47,6 +48,28 @@ wp-plugin new awesome-seo-tools
 ```
 
 Esto generará una carpeta `awesome-seo-tools` lista para empezar a desarrollar.
+
+
+### Generar con Docker
+
+Si agregas `--docker`, además de la estructura del plugin se generan:
+
+- `docker-compose.yml` con servicios de `wordpress`, `db` (MariaDB) y `wpcli`.
+- `.env.example` con variables para puertos y credenciales.
+
+Ejemplo:
+
+```bash
+wp-plugin new awesome-seo-tools --docker
+```
+
+Luego puedes iniciar el entorno con:
+
+```bash
+cd awesome-seo-tools
+cp .env.example .env
+docker compose up -d
+```
 
 ## Estructura del proyecto (este repositorio)
 
